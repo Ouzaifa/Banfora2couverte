@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family");
+:root{
+    --main-color:#8e44ad;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(WhatsApp\ Image\ 2023-08-05\ à\ 20.09.12.jpg) ;
+    height: 100vh;
+    transition: 0.5s;
+    animation: anime 10s linear infinite;
+
+}
+section{
+    padding: 5rem 10%;
+}
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000 !important;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+.header .navbar a:hover {
+    color: var(--main-color);
+} 
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    section {
+        pading: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+        transition: .3s linear;
+    }
+    #menu-btn.fa-times{
+        transform: ratate(180deg);
+    }
+    .header .navbar .active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+
+    .header .navbar .a{
+         display: block;
+        text-align: center;
+        margin: 2rem;
+    }
+ }

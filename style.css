@@ -1,0 +1,195 @@
+:root{
+    --main-color:#8e44ad;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+
+}
+
+span {
+    color:#009688;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(WhatsApp\ Image\ 2023-08-05\ à\ 20.09.12.jpg) ;
+    height: 100vh;
+    transition: 0.5s;
+    animation: anime 10s linear infinite;
+
+}
+section{
+    padding: 5rem 10%;
+}
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000 !important;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+section .header .logo {
+    font-size: 2.5rem;
+    width: 30%;
+    vertical-align: middle;
+    margin-top: 8px;
+}
+section .header .logo img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+.header .navbar a:hover {
+    color: var(--main-color);
+} 
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    section {
+    padding: 5rem;
+    }
+}
+
+@media (max-width: 768px){
+ 
+    .header .navbar .active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+
+    .header .navbar .a{
+         display: block;
+        text-align: center;
+        margin: 2rem;
+    }
+ }
+.text {
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text h1 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+.text p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.links {
+    margin-top: 25px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    text-decoration: 0;
+    color: #fff;
+    border: 2px solid #009688;
+    padding: 5px 40px;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 6px;
+    
+}
+.links a ::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #009688;
+    transition: 0.7s;
+    z-index: 1;
+    border-radius: 6px;
+}
+.links a :hover::after {
+    width: 100%;
+
+}
+.links a :hover {
+    border: 2px solid transparent;
+}
+/*Animation background*/
+@keyframes anime {
+    0%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Image\ 1.jpg) ;
+        background-position: center;
+        background-size: cover;
+ 
+    }
+    25%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Image\ 5.jpg) ;
+        background-position: center;
+        background-size: cover;
+ 
+    }
+    50%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Image\ 4.jpg) ;
+        background-position: center;
+        background-size: cover;
+ 
+    }
+    100%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Image\ 2.jpg) ;
+        background-position: center;
+        background-size: cover;
+ 
+    }
+    
+}
+
+/*responsive*/
+@media (max-width:760px) {
+    header ul {
+        display: none;
+    }
+   
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
